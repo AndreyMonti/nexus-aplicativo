@@ -1,0 +1,20 @@
+{
+  "cli": {
+    "version": ">= 16.24.1", 
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": "clean assembleRelease -x bundleReleaseJsAndAssets"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": "clean bundleRelease -x bundleReleaseJsAndAssets"
+      }
+    }
+  }
+}
